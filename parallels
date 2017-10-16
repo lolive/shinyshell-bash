@@ -1,0 +1,27 @@
+local proc procs outputs tempfile morework
+    declare -a procs=()
+    declare -A outputs=()
+
+    morework=true
+    while $morework; do
+        if [[ "${#procs[@]}" -lt "$POOL_SIZE" ]]; then
+            read proc || { morework=false; continue ;}
+
+            tempfile=$(mktemp)
+            eval "$proc" >$tempfile 2>&1 &
+
+            procs["${#procs[@]}"]="$!"
+            outputs["$!"]=$tempfile
+        fi
+
+        for n in "${!procs[@]}"; do
+            pid=${procs[n]}
+            kill -0 $pid 2>/dev/null && continue
+
+            cat "${outputs[$pid]}"
+            unset procs[$n] outputs[$pid]
+        done
+    done
+
+    wait
+    for out in "${outputs[@]}"; do cat $out; done
