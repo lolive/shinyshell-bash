@@ -15,6 +15,8 @@ This package contains the following functions:
 
 ## parallels  :
 
+Reads from stdin a list of commands to run in parallel (one per line). Set a POOL_SIZE variable to limit the number of parallel processes.
+
 Use like this:
 
 ```
