@@ -1,4 +1,8 @@
+# Package "Shinyshell-bash":
+
 Some useful Bash stuff.
+
+This package contains the following functions:
 
 
 ## mute_popd  :
