@@ -1,8 +1,4 @@
-
-$ mute_popd  : ""
-
-$ mute_pushd  : ""
-
+Some useful Bash stuff.
 
 
 ## mute_popd  :
