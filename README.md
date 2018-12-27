@@ -4,22 +4,22 @@ Some useful Bash stuff.
 
 This package contains the following functions:
 
-<pre>
 
 ## mute_popd  :
 
-
-</pre>
 <pre>
+</pre>
+
 
 ## mute_pushd  :
 
-
-</pre>
 <pre>
+</pre>
+
 
 ## parallels  :
 
+<pre>
 Reads from stdin a list of commands to run in parallel (one per line). Set a POOL_SIZE variable to limit the number of parallel processes.
 
 Use like this:
@@ -34,5 +34,5 @@ Use like this:
 ```
 
 PS: this script was described at: http://milhouseonsoftware.com/2015/11/20/writing-a-process-pool-in-bash/
-
 </pre>
+
