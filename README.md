@@ -4,14 +4,19 @@ Some useful Bash stuff.
 
 This package contains the following functions:
 
+<pre>
 
 ## mute_popd  :
 
 
+</pre>
+<pre>
 
 ## mute_pushd  :
 
 
+</pre>
+<pre>
 
 ## parallels  :
 
@@ -30,3 +35,4 @@ Use like this:
 
 PS: this script was described at: http://milhouseonsoftware.com/2015/11/20/writing-a-process-pool-in-bash/
 
+</pre>
